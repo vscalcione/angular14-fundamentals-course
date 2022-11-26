@@ -1,5 +1,27 @@
-<app-handlers></app-handlers>
+<h1>Handlers functionality</h1>
+<button (click)="clickHandler($event)">Click me</button>
 <hr />
-<app-directives></app-directives>
+<input type="text" (keydown)="inputHandler($event)" />
 <hr />
-<app-square-brackets></app-square-brackets>
+<input type="text" (keydown.enter)="inputHandler($event)" />
+
+<hr />
+<h1>Directives functionality</h1>
+<button (click)="(visible != visible)">invert</button>
+<hr />
+<img
+  *ngIf="visible"
+  src="https://angular.io/assets/images/logos/angular/angular.png"
+/>
+<button (click)="toggle()">toggle</button>
+<h1 *ngIf="visible">Hello World!</h1>
+<li [hidden]="!visible" *ngFor="let user of users">{{ user }}</li>
+
+<hr />
+<h1>Square brackets params functionality</h1>
+<button [disabled]="url" (click)="loadImage()">Load</button>
+<button (click)="unloadImage()">Unload</button>
+
+<img *ngIf="url" [src]="url" alt="" />
+<hr />
+<div [innerHTML]="url"></div>
