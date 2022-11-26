@@ -1,0 +1,6 @@
+<button [disabled]="url" (click)="loadImage()">Load</button>
+<button (click)="unlaodImage()">Unload</button>
+
+<img *ngIf="url" [src]="url" alt="" />
+<hr />
+<div [innerHTML]="url"></div>
