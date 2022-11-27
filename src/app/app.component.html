@@ -1,27 +1,11 @@
-<h1>Handlers functionality</h1>
-<button (click)="clickHandler($event)">Click me</button>
+<app-handlers></app-handlers>
 <hr />
-<input type="text" (keydown)="inputHandler($event)" />
+<app-directives></app-directives>
 <hr />
-<input type="text" (keydown.enter)="inputHandler($event)" />
-
+<app-square-brackets></app-square-brackets>
 <hr />
-<h1>Directives functionality</h1>
-<button (click)="(visible != visible)">invert</button>
+<app-hello></app-hello>
 <hr />
-<img
-  *ngIf="visible"
-  src="https://angular.io/assets/images/logos/angular/angular.png"
-/>
-<button (click)="toggle()">toggle</button>
-<h1 *ngIf="visible">Hello World!</h1>
-<li [hidden]="!visible" *ngFor="let user of users">{{ user }}</li>
-
+<app-pipes></app-pipes>
 <hr />
-<h1>Square brackets params functionality</h1>
-<button [disabled]="url" (click)="loadImage()">Load</button>
-<button (click)="unloadImage()">Unload</button>
-
-<img *ngIf="url" [src]="url" alt="" />
-<hr />
-<div [innerHTML]="url"></div>
+<app-custom-types></app-custom-types>

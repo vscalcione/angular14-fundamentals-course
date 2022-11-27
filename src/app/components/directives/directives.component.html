@@ -1,0 +1,10 @@
+<h1>Directives functionality</h1>
+<button (click)="(visible != visible)">invert</button>
+<br />
+<img
+  *ngIf="visible"
+  src="https://angular.io/assets/images/logos/angular/angular.png"
+/>
+<button (click)="toggle()">toggle</button>
+<h1 *ngIf="visible">Hello World!</h1>
+<li [hidden]="!visible" *ngFor="let user of users">{{ user }}</li>

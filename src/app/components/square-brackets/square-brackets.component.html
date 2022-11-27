@@ -1,0 +1,7 @@
+<h1>Square brackets params functionality</h1>
+<button [disabled]="url" (click)="loadImage()">Load</button>
+<button (click)="unloadImage()">Unload</button>
+
+<img *ngIf="url" [src]="url" alt="" />
+<br />
+<div [innerHTML]="url"></div>
