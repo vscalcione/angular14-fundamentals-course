@@ -9,6 +9,7 @@ import { HelloComponent } from './components/hello/hello.component';
 import { SquareBracketsComponent } from './components/square-brackets/square-brackets.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CustomTypesComponent } from './components/custom-types/custom-types.component';
+import { Utility } from './services/utility';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CustomTypesComponent } from './components/custom-types/custom-types.com
     CustomTypesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [Utility],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
