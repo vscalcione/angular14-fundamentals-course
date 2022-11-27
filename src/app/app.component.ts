@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { User } from './model/user';
 import { Utility } from './services/utility';
+import { HttpClient } from '@angular/common/http';
+import { User } from './model/user';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,15 @@ import { Utility } from './services/utility';
 })
 export class AppComponent {
   title = 'myapp';
+  url: string = 'https://jsonplaceholder.typicode.com/users';
+  users?: User[];
 
-  constructor(utils: Utility) {
+  constructor(http: HttpClient, utils: Utility) {
     const response = utils.add(1, 5);
-    console.log(response);
+    console.log('Usage of an dependency injection', response);
+
+    http.get<User[]>(this.url).subscribe((result: any) => {
+      this.users = result;
+    });
   }
 }

@@ -10,6 +10,7 @@ import { SquareBracketsComponent } from './components/square-brackets/square-bra
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CustomTypesComponent } from './components/custom-types/custom-types.component';
 import { Utility } from './services/utility';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { Utility } from './services/utility';
     PipesComponent,
     CustomTypesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [Utility],
   bootstrap: [AppComponent],
 })

@@ -9,3 +9,10 @@
 <app-pipes></app-pipes>
 <hr />
 <app-custom-types></app-custom-types>
+<hr />
+<h1>Fake REST API Usage</h1>
+<pre>{{ users | json }}</pre>
+<br />
+<li *ngFor="let user of users">
+  {{ user.name }}
+</li>
